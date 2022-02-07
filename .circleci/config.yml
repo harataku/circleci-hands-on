@@ -24,7 +24,7 @@ jobs:
       - image: cimg/node:16.13.2
     steps:
       - checkout
-      - run: npm node/install-packages
+      - run: node/install-packages
       - run: npm run test:ci
 
 # Invoke jobs via workflows
@@ -33,6 +33,4 @@ workflows:
   say-hello-workflow:
     jobs:
       - say-hello
-      - unittest:
-          requires:
-            - say-hello
+      - unittest
