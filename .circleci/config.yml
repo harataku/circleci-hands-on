@@ -24,7 +24,7 @@ jobs:
       - image: cimg/node:16.13.2
     steps:
       - checkout
-      - run: node/install-packages
+      - node/install-packages
       - run: npm run test:ci
 
 # Invoke jobs via workflows
